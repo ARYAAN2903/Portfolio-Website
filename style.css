@@ -1,0 +1,483 @@
+/* Reset styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(18, 18, 46);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar styles */
+.navbar {
+    background-color: rgb(18, 18, 46);
+    color: #fff;
+    padding: 40px 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    padding-left: 30px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-menu a:hover{
+    color: rgb(144, 144, 230);
+    font-size: 1.04rem;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 10px 10px; /* Add some padding to separate links */
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 8px 0; /* Add vertical spacing between links */
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+  
+  
+  /* Header */
+  h1 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Main Content */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+  }
+  
+  .content img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+    
+  }
+  
+  .content h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1px;
+  }
+  
+  .purple {
+    color: rgb(146, 47, 146);
+  }
+  
+  #element {
+    color: rgb(174, 52, 174);
+  }
+  .content h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+ .btn {
+    padding: 12px;
+    background-color: rgb(61, 32, 61);
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .content a.btn:hover {
+    background-color: goldenrod;
+    transform: scale(1.1);
+  }
+  
+  /* Media Query */
+  @media only screen and (max-width: 768px) {
+
+  
+    .register {
+      margin-top: 20px;
+    }
+  
+    .register input[type="submit"] {
+      font-size: 16px;
+      padding: 10px 20px;
+      }
+      
+      h1 {
+      font-size: 24px;
+      }
+      
+      .content {
+      text-align: center;
+      margin-top: 20px;
+      }
+      
+        .btn {
+      font-size: 20px;
+      padding: 10px 10px;
+      margin-bottom: 40px;
+      }
+      
+      img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      }
+      }
+  
+  
+       hr {
+        border: 0;
+        background: rgb(241, 241, 248);
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+
+      /* Style for the About section */
+.About {
+    background-color: rgb(18, 18, 46);
+    padding: 20px; /* Add some padding for spacing */
+  }
+  
+  /* Style for the main content container */
+  .main {
+    display: flex; /* Use flexbox to arrange content */
+    flex-wrap: wrap; /* Allow content to wrap to the next line on smaller screens */
+    align-items: center; /* Vertically center content */
+  }
+  
+  /* Style for the image */
+  .main img {
+    max-width: 80%; /* Ensure the image doesn't overflow its container */
+    margin-left: 50px; /* Add spacing between the image and text on the right */
+  }
+  
+  /* Style for the About-text div */
+  .About-text {
+    margin-left: 50px;
+    flex: 1; /* Allow this div to grow to fill available space */
+  }
+  
+  /* Style for the heading */
+  .About-text h2 {
+    font-size: 54px; /* Adjust font size as needed */
+    padding-bottom: 60px; /* Add spacing between heading and paragraph */
+  }
+  
+  /* Style for the paragraph */
+  .About-text p {
+    font-size: 26px; /* Adjust font size as needed */
+    padding-bottom: 50px; /* Add spacing between paragraphs */
+  }
+  
+  /* Style for the "Download Resume" link */
+  .About-text a {
+    padding: 12px;
+    background-color: rgb(61, 32, 61);
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .About-text a:hover {
+    background-color: goldenrod;
+    transform: scale(1.1);
+  }
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .main img {
+      margin-right: 0; /* Remove spacing on the right for the image */
+      margin-bottom: 20px; /* Add spacing between the image and text below it */
+    }
+  
+    .About-text {
+      text-align: center; /* Center text on smaller screens */
+    }
+  }
+  
+  
+  
+  .Services{
+    background-color: rgb(18, 18, 46);
+    backdrop-filter: blur(18px);
+    width: 100%;
+    padding: 100px 0px;
+  }
+  
+  .title h3{
+    color: white;
+    font-size: 55px;
+    width: 100%;
+    max-width: 1130px;
+    margin: 0px auto 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0px -15px;
+  }
+  
+  .card{
+    height: auto;
+    width: 100%;
+    max-width: 535px;
+    padding: 35px;
+    background: #191919;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    
+  }
+
+  .card i{
+    font-size: 60px;
+    margin: 25px 0px;
+    color: gold;
+  }
+  .card1 {
+    height: auto;
+    width: 100%;
+    max-width: 535px;
+    padding: 35px;
+    background: #191919;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    height: auto;
+    width: 100%;
+    max-width: 535px;
+    padding: 35px;
+    background: #191919;
+    border-radius: 20px;
+  
+    
+}
+
+/* Style for the h5 element */
+.card1 h5 {
+    margin-top: 0; /* Remove default margin */
+}
+
+/* Style for the skill container */
+.skill-container {
+    display: flex; /* Display skills side by side */
+    justify-content: center; /* Center skills horizontally */
+    align-items: flex-start; /* Align items to the top of the column */
+    flex-wrap: wrap; /* Allow items to wrap to the next column */
+    margin-top: 20px; /* Add margin to separate skills from the title */
+}
+
+/* Style for each skill column */
+.skill-column {
+    flex-basis: calc(33.33% - 20px); /* 33.33% width for each column with margin in between */
+    margin: 10px; /* Add margin between columns */
+}
+
+/* Style for each skill item */
+.skill-item {
+    
+    text-align: center; /* Center align text */
+    margin: 10px; /* Add margin for spacing between items */
+    padding: 5px; /* Add padding for spacing inside items */
+    background: #191919;
+    color: #fff; /* Text color */
+    border-radius: 20px; /* Rounded corners for skills */
+}
+
+/* Style for the skill image */
+.skill-item .image {
+    width: 30px; /* Adjust the image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing */
+    margin: 0 auto 10px; /* Add margin to space images on the bottom */
+}
+
+/* Style for the skill text */
+.skill-item h5 {
+    font-size: 16px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for the skill description */
+.skill-item p {
+    font-size: 14px; /* Adjust font size */
+}
+
+
+
+
+  
+  h5{
+    color: white;
+    font-size: 33px;
+    margin-bottom: 25px;
+  }
+  
+  .pra p{
+    color: #fcfcfc;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  
+  .card a {
+    padding: 12px;
+    background-color: rgb(61, 32, 61);
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    background-color: goldenrod;
+    transform: scale(1.1);
+  }
+  
+  
+/* Style for the footer */
+footer {
+    background-color: rgb(31, 20, 31);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style for the footer container */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the footer-first section */
+.footer-first {
+    text-align: center;
+}
+
+/* Style for the contact info */
+.footer-first h3 {
+    margin-top: 10px;
+}
+
+/* Style for the footer rights */
+.footer-rights {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust padding for smaller screens */
+    footer {
+        padding: 10px 0;
+    }
+
+    /* Reduce font size for contact info on smaller screens */
+    .footer-first h3 {
+        font-size: 16px;
+    }
+
+    /* Center-align the footer rights text on smaller screens */
+    .footer-rights {
+        text-align: center;
+    }
+}
