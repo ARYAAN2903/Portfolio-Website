@@ -165,6 +165,15 @@
     background-color: goldenrod;
     transform: scale(1.1);
   }
+
+  .profile-pic {
+    width: 400px; /* Adjust the size as needed */
+    height: 400px; /* Ensure the height matches the width for a circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-left: 50px; /* Optional: Adjust margin to position the image */
+
+  }
   
   /* Media Query */
   @media only screen and (max-width: 768px) {
@@ -328,25 +337,13 @@
   }
   .card1 {
     height: auto;
-    width: 100%;
-    max-width: 535px;
-    padding: 35px;
+    width: calc(33.33% - 20px); /* Adjust width to fit 3 in a row */
+    max-width: 420px; /* Set a maximum width */
+    padding: 20px;
     background: #191919;
     border-radius: 20px;
-    position: relative;
-    overflow: hidden;
     text-align: center;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    height: auto;
-    width: 100%;
-    max-width: 535px;
-    padding: 35px;
-    background: #191919;
-    border-radius: 20px;
-  
-    
+    margin: 15px; /* Adjust margin to control spacing */
 }
 
 /* Style for the h5 element */
@@ -397,6 +394,18 @@
 /* Style for the skill description */
 .skill-item p {
     font-size: 14px; /* Adjust font size */
+}
+
+@media (max-width: 768px) {
+  .card1 {
+      width: 90%; /* Make each card take full width */
+      max-width: none; /* Remove the maximum width */
+  }
+
+  .skill-column {
+      flex-basis: 100%; /* Make each column take full width */
+      margin: 10px 0; /* Add vertical spacing between columns */
+  }
 }
 
 
